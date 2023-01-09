@@ -271,6 +271,7 @@ h6 {
     border-right: 1px solid black;
     margin-left: -500px;
     transition: all 0.5s;
+    background-color: #000;
 }
 
 .header__list {
