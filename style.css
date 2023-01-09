@@ -269,8 +269,8 @@ h6 {
     width: 15%;
     background-color: rgba(249, 208, 4, 0.8);
     border-right: 1px solid black;
-    margin-left: -500px;
-    transition: all 0.5s;
+    margin-left: -15%;
+    transition: all 0.2s;
 }
 
 .header__list {
