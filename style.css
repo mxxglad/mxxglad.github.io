@@ -106,12 +106,13 @@ h6 {
 
 
 
+
 .burger-container{
     border: 1px solid black;
     box-sizing: border-box;
     border-radius: 10%;
     background-color: #F9D004;
-    transition: margin-left 0.33s linear;
+    transition: all 0.5s;
 }
 
 .header__burger{
@@ -168,7 +169,7 @@ h6 {
 
     .burger-container{
         height: 90px;
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 50%;
         border-radius: 0px 3px 3px 0;
@@ -180,9 +181,10 @@ h6 {
     }
 
     .burger-container--active--768{
-        margin-left: 50%;
-        transition: margin-left 0.3s linear 0.185s;
+        left: 50%;
+        transition: all 0.5s;
     }
+
 }
 
 
@@ -268,7 +270,7 @@ h6 {
     background-color: rgba(249, 208, 4, 0.8);
     border-right: 1px solid black;
     margin-left: -500px;
-    transition: all 0.75s;
+    transition: all 0.5s;
 }
 
 .header__list {
@@ -304,11 +306,8 @@ h6 {
 @media (max-width: 768px){
     .header__menu {
         width: 50%;
-        transition: margin-left 0.5s linear;
-    }
-    
-    .header__menu--active {
-        transition: margin-left 0.5s linear;
+        margin-left: -50%;
+        transition: all 0.5s;
     }
 }
 
