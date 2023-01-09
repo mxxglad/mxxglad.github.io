@@ -265,7 +265,7 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    min-height: 100%;
     width: 15%;
     background-color: rgba(249, 208, 4, 0.8);
     border-right: 1px solid black;
