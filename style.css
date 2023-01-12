@@ -669,6 +669,7 @@ iframe {
 }
 
 .footer__list {
+    max-width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -746,6 +747,6 @@ iframe {
 
 @media (max-width: 575px) {
     .footer__container {
-        width: 90%;
+        max-width: 90%;
     }
 }
