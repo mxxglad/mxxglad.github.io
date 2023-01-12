@@ -111,7 +111,7 @@ p {
 }
 
 .header__container {
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     margin: 0 auto;
     display: -webkit-box;
