@@ -155,7 +155,7 @@ p {
 }
 
 .burger-container--active {
-    left: 15%;
+    left: 20%;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
@@ -466,7 +466,9 @@ p {
 
 
 
-.mice__img {
+.mice__img,
+.stand-with-ukr,
+.bestcellers {
     max-width: 100%;
 }
 
@@ -476,8 +478,7 @@ p {
 
 .videos {
     width: 1000px;
-    ;
-    margin: 175px auto 0;
+    margin: 50px auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -557,15 +558,9 @@ iframe {
     width: 90%;
     max-width: 385px;
     background-color: #F9D004;
-    margin: 180px auto 100px;
+    margin: 50px auto 50px;
 }
 
-
-@media (max-width:767px) {
-    .yellow-line {
-        margin: 200px auto 65px;
-    }
-}
 
 
 
