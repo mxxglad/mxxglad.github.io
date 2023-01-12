@@ -331,7 +331,7 @@ p {
 .header__lang-list li a {
     color: #000;
     padding: 10px 0;
-    display: inline-block;
+    display: block;
 }
 
 .header__lang-list li:hover {
@@ -345,6 +345,10 @@ p {
     background-color: #F9D004;
     text-align: center;
     border-bottom: 1px solid #000;
+}
+
+.header__lang-nav--active{
+    background-color: #ffe75e;
 }
 
 .header__lang-list--active {
