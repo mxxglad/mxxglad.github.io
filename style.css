@@ -240,7 +240,7 @@ p {
         height: 90px;
         position: fixed;
         left: 0;
-        top: 40%;
+        top: calc(50% - 45px);
         border-radius: 0px 3px 3px 0;
         border-left: none;
         -webkit-transition: all 0.2s;
