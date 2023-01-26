@@ -8,6 +8,7 @@ $('.more-button').click(function () {
 $('.header__burger').click(function () {
     $('.all-nav-aside').toggleClass('visible');
     $('.more__list').toggleClass('more__list--active');
+    $('body').toggleClass('body--locked');
 });
 $(function () {
     $(window).scroll(function () {

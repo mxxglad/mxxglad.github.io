@@ -93,6 +93,12 @@ body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+@media (max-width: 1165px) {
+    .body--locked {
+        overflow: hidden;
+    }
+}
+
 
 
 
@@ -107,6 +113,7 @@ body{
     width: 180px;
     position: relative;
     background-color: #fff;
+    overflow: scroll;
 }
 
 .small-container{
