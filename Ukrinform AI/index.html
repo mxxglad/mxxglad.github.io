@@ -1,1 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.ukrinform.ua/img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Штучний інтелект</title>
+</head>
+<body>
+    <div class="big-container">
+        <div class="all-nav-aside">
+        <nav class="navbar-aside">
+            <div class="search-block">
+                <input type="text" class="search-form" placeholder="Пошук">
+                <span class="search-icon"></span>
+            </div>   
+            <div class="links">
+                <ul class="links__tag-list">
+                    <li><a href="#">ВІЙНА</a></li>
+                    <li><a href="#">#UAРАЗОМ</a></li>
+                    <li><a href="#">ПОЛІТИКА</a></li>
+                    <li><a href="#">ЕКОНОМІКА</a></li>
+                    <li><a href="#">СВІТ</a></li>
+                    <li><a href="#">СУСПІЛЬСТВО</a></li>
+                    <li><a href="#">КУЛЬТУРА</a></li>
+                    <li><a href="#">РЕГІОНИ</a></li>
+                    <li><a href="#">КИЇВ</a></li>
+                    <li><a href="#">КРИМ</a></li>
+                    <li><a href="#">СПОРТ</a></li>
+                    <li><a href="#">ДІАСПОРА</a></li>
+                    <li><a href="#">ТЕХНОЛОГІЇ</a></li>
+                </ul>
+                <hr class="links__first-hr">
+                <ul class="links__more-list">
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#" class="more-button">Більше</a></li>
+                </ul>
+                <hr class="links__second-hr">
+                <div class="links__socials">
+                    <a href="instagram.com" class="icon-instagram">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-3 5a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" clip-rule="evenodd"></path>
+                            <path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"></path>
+                            <path fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5Zm14 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="facebook.com" class="icon-facebook">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 3.498a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13v-2.7a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5v-2.6Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="twitter.com" class="icon-twitter">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.25 5.133a9.46 9.46 0 0 1-2.65.717 4.57 4.57 0 0 0 2.03-2.512c-.908.53-1.9.903-2.932 1.101A4.647 4.647 0 0 0 16.327 3c-2.55 0-4.615 2.034-4.615 4.542a4.37 4.37 0 0 0 .119 1.036A13.158 13.158 0 0 1 2.315 3.83a4.485 4.485 0 0 0-.627 2.283c0 1.574.821 2.967 2.062 3.782a4.57 4.57 0 0 1-2.1-.567v.056c0 2.204 1.595 4.036 3.704 4.454a4.752 4.752 0 0 1-1.216.159c-.291 0-.582-.028-.868-.085.587 1.805 2.294 3.118 4.315 3.155a9.356 9.356 0 0 1-6.835 1.88A13.063 13.063 0 0 0 7.816 21c8.501 0 13.146-6.923 13.146-12.928 0-.197-.006-.394-.015-.586a9.304 9.304 0 0 0 2.303-2.353Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="youtube.com" class="icon-youtube">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.843 6.975c0-2.11-1.552-3.807-3.469-3.807A170.465 170.465 0 0 0 12.422 3h-.844c-2.7 0-5.353.047-7.95.169-1.912 0-3.464 1.706-3.464 3.815A69.732 69.732 0 0 0 0 11.99a72.582 72.582 0 0 0 .16 5.011c0 2.11 1.551 3.82 3.464 3.82 2.728.127 5.526.183 8.372.178 2.85.01 5.64-.05 8.371-.178 1.918 0 3.47-1.71 3.47-3.82a72.41 72.41 0 0 0 .159-5.016 68.19 68.19 0 0 0-.153-5.01Zm-14.14 9.614V7.378L16.5 11.98l-6.797 4.608Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="telegram.com" class="icon-telegram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0Zm-9.641-2.617c-.973.405-2.918 1.242-5.833 2.512-.472.188-.721.373-.744.553-.037.303.344.423.863.587l.219.069c.51.166 1.197.36 1.554.367.325.008.686-.125 1.085-.4 2.723-1.838 4.13-2.767 4.217-2.787.063-.015.15-.033.207.02.06.051.053.15.047.176-.038.161-1.534 1.551-2.308 2.271-.241.225-.412.384-.447.42a10.52 10.52 0 0 1-.235.233c-.475.457-.83.8.018 1.36.41.27.737.491 1.063.713.355.243.71.484 1.17.787.116.075.229.156.338.233.413.296.787.56 1.246.518.267-.025.543-.275.683-1.025.332-1.771.983-5.607 1.133-7.189.01-.131.004-.263-.016-.393a.421.421 0 0 0-.143-.272.658.658 0 0 0-.387-.116c-.375.006-.954.207-3.73 1.363Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <nav class="more">
+            <ul class="more__list">
+                <li class="more__first-elem"><a href="#">Подкасти</a></li>
+                <li><a href="#">Публікації</a></li>
+                <li><a href="#">Інтерв'ю</a></li>
+                <li><a href="#">Фото</a></li>
+                <li><a href="#">Відео</a></li>
+                <li><a href="#">Блоги</a></li>
+                <li><a href="#">Інфорграфіка</a></li>
+                <li><a href="#">Лонгріди</a></li>
+                <li><a href="#">Релізи</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="small-container">
+            <header class="header">
+                <nav class="header__navbar">
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <ul class="header__list">
+                        <li><a href="#">Головна</a></li>
+                        <li><a href="#">Передплата</a></li>
+                        <li><a href="#">Фотобанк</a></li>
+                        <li><a href="#">Пресцентр</a></li>
+                        <li><a href="#">Релізи</a></li>
+                        <li><a href="#">Анонси</a></li>
+                        <li><a href="#"><img src="./img+icons/dom-top.png" alt=""></a></li>
+                    </ul>
+                </nav>
+                <div class="header__lang-button">
+                    <svg width="20" height="20" fill="#AEB1B7" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M19.424 4.58a10.5 10.5 0 1 0-14.85 14.85 10.5 10.5 0 1 0 14.85-14.85ZM2.999 12.006c0-.796.106-1.59.314-2.358.345.74.844 1.38 1.184 2.14.44.977 1.619.706 2.14 1.562.462.76-.032 1.721.314 2.516.251.577.844.703 1.253 1.125.417.426.408 1.009.472 1.564a14.316 14.316 0 0 0 .353 1.949c-3.508-1.232-6.03-4.576-6.03-8.498Zm9 9a9.062 9.062 0 0 1-1.5-.125c.006-.127.008-.246.02-.328.114-.746.488-1.475.991-2.032.497-.55 1.179-.923 1.599-1.547.412-.61.535-1.43.365-2.142-.25-1.052-1.679-1.403-2.45-1.973-.442-.329-.837-.836-1.418-.877-.269-.019-.493.039-.759-.03-.244-.063-.435-.194-.695-.16-.485.064-.79.582-1.312.512-.495-.066-1.004-.645-1.117-1.116-.144-.606.335-.802.848-.856.215-.023.455-.047.66.032.272.1.4.365.643.5.456.25.548-.15.479-.555-.105-.607-.227-.854.314-1.271.375-.288.696-.496.636-1.013-.036-.304-.202-.441-.047-.744.118-.23.44-.438.65-.575.544-.354 2.328-.328 1.6-1.32-.215-.29-.61-.811-.985-.883-.469-.088-.677.435-1.004.666-.337.238-.994.51-1.332.14-.455-.496.301-.659.468-1.006.078-.161 0-.386-.13-.597.17-.072.341-.138.516-.199.11.081.24.13.375.141.313.02.61-.149.883.065.304.234.523.53.926.603.39.071.803-.156.9-.555.058-.243 0-.5-.057-.75a8.945 8.945 0 0 1 4.922 1.51c-.094-.036-.206-.032-.344.032-.285.132-.688.469-.721.803-.038.378.52.432.786.432.398 0 .802-.178.674-.639-.056-.2-.132-.407-.255-.533.295.205.576.426.844.663l-.012.013c-.27.281-.584.504-.769.846a.741.741 0 0 1-.54.418c-.146.034-.312.047-.434.144-.34.267-.146.91.176 1.102.406.243 1.009.129 1.315-.218.24-.272.381-.744.812-.744.19 0 .372.074.507.207.178.185.143.357.18.588.068.41.43.187.65-.02.16.286.304.58.432.88-.242.349-.434.728-1.016.322-.348-.243-.562-.596-1-.706-.381-.093-.773.004-1.15.07-.429.074-.938.107-1.263.432-.314.313-.48.732-.816 1.046-.647.61-.92 1.275-.501 2.136.403.829 1.246 1.278 2.156 1.22.894-.06 1.823-.579 1.797.72-.01.46.087.778.228 1.205.13.394.122.775.151 1.182.03.476.104.948.223 1.41a8.989 8.989 0 0 1-7.099 3.474Z">
+                        </path>
+                    </svg>
+                    <span>Укр</span>
+                </div>
+                <ul class="lang-list">
+                    <li><a href="#">Укр</a></li>
+                    <li><a href="#">Рус</a></li>
+                    <li><a href="#">Eng</a></li>
+                    <li><a href="#">Esp</a></li>
+                    <li><a href="#">Deu</a></li>
+                    <li><a href="#">Fra</a></li>
+                    <li><a href="#">Jp</a></li>
+                    <li><a href="#">Pol</a></li>
+                </ul>
+            </header>
+            <div class="title">
+                <a href="#" class="logo"><img src="https://www.ukrinform.ua/img/logo_ukr.svg" alt=""></a>
+                <h3 class="title__slogan">Мультимедійна платформа іномовлення України</h3>
+                <p class="title__date">вівторок, 17 січня 2023, 13:55</p>
+            </div>
+            <main class="main">
+                <article class="ai">
+                    <h1 class="ai__title">ШТУЧНИЙ ІНТЕЛЕКТ</h1>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2021_10/thumb_files/360_240_1634583494-153.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_08/thumb_files/360_240_1533646017-2656.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2019_03/thumb_files/360_240_1553618292-301.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_12/thumb_files/360_240_1670597705-2400.jpeg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_12/thumb_files/360_240_1670506092-436.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_12/thumb_files/360_240_1669992788-512.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_11/thumb_files/360_240_1669726029-210.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2016_09/thumb_files/360_240_1473596800-6180.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_11/thumb_files/360_240_1668779762-876.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_11/thumb_files/360_240_1668517822-674.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_06/thumb_files/360_240_1529500799-5525.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2012_10/thumb_files/360_240_1349599440.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_10/thumb_files/360_240_1666708293-316.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_09/thumb_files/360_240_1664441811-170.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_01/thumb_files/360_240_1516021357-7569.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_09/thumb_files/360_240_1663841257-643.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_03/thumb_files/360_240_1648435396-771.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_07/thumb_files/360_240_1532822449-6280.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_07/thumb_files/360_240_1659079036-128.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_06/thumb_files/360_240_1528650363-6726.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_07/thumb_files/360_240_1657615961-346.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_09/thumb_files/360_240_1537181922-2209.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_06/thumb_files/360_240_1656484941-819.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_06/thumb_files/360_240_1656421589-962.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2018_12/thumb_files/360_240_1543861581-709.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_06/thumb_files/360_240_1654946349-871.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_06/thumb_files/360_240_1654673023-310.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_06/thumb_files/360_240_1654582567-381.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2021_12/thumb_files/360_240_1639499806-164.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="ai__block">
+                        <p class="ai__date">09 січня 2023</p>
+                        <hr>
+                        <div class="block__content-container">
+                            <a href="#"><img src="https://static.ukrinform.com/photos/2022_03/thumb_files/360_240_1647171528-510.jpg" alt=""></a>
+                            <a href="#"><time>10:49 </time>Штучний інтелект почав озвучувати аудіокниги для Apple Books</a>
+                            <p class="ai__text">
+                                Американська компанія Apple почала використовувати штучний інтелект (ШІ) для озвучування аудіокниг у сервісі
+                                Apple
+                                Books.
+                            </p>
+                        </div>
+                    </section>
+                </article>
+                <aside class="latest-news">
+                    <a href="#" class="latest-news__title">ОСТАННІ НОВИНИ</a>
+                    <div class="latest-news__content-container">
+                        <p class="latest-news__date"><time >17 січня 2023</time></p>
+                        <div class="news-whole-block">
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Свириденко у Давосі: Україна покриває 50% свого бюджету, решту – партнери
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30 </time><span>ЕКСКЛЮЗИВ</span> ОП: Україна може наблизитися до практичного створення «трибуналу для путіна» за рік-півтора
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Держдеп США запровадив візові санкції проти білоруських депутатів
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news important">
+                                    <time class="important">16:30</time> Україна отримала €3 мільярди макрофінансової допомоги від ЄС
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news important">
+                                    <time class="important">16:30</time> З приводу повідомлень про кібератаку: агентство працює
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> В Ізраїлі «навчили» робота відчувати запахи
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30 </time><span>ФОТО</span> Загарбники обстріляли коледж у звільненому Куп’янську, будівля майже знищена
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Шольц представив нового міністра оборони ФРН
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Розвідка: Розмови про можливий наступ із білорусі - спроба відтягнути наші війська від лінії фронту
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Зеленська обговорила у Давосі гуманітарну допомогу з главою МЗС Швейцарії
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Суд дозволив арештувати Януковича у справі про розстріл мітингувальників на Майдані
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> У Рівненській ОВА розповіли, як зміцнюють кордон із білоруссю
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30 </time><span>ФОТО</span> Унаслідок нічного обстрілу Херсона постраждав театр ляльок і типографія
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news">
+                                    <time>16:30</time> Єврокомісія планує щокварталу виплачувати Україні по €4,5 мільярда упродовж року
+                                </a>
+                            </div>
+                            <div class="news-block">
+                                <a href="#" class="news important">
+                                    <time class="important">16:30</time> росіяни обстріляли підприємство критичної інфраструктури у Херсоні
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="link-all-news">ВСІ НОВИНИ</a>
+                    </div>
+                </aside>
+            </main>
+            <footer class="footer">
+                <div class="footer__first-column">
+                    <p>
+                        При цитуванні і використанні будь-яких матеріалів в Інтернеті відкриті для пошукових систем гіперпосилання не нижче
+                    першого абзацу на «ukrinform.ua» — обов’язкові, крім того, цитування перекладів матеріалів іноземних ЗМІ можливе лише за
+                    умови гіперпосилання на сайт ukrinform.ua та на сайт іноземного ЗМІ. Цитування і використання матеріалів у офлайн-медіа,
+                    мобільних додатках, SmartTV можливе лише з письмової згоди "ukrinform.ua". Матеріали з позначкою «Реклама» та «PR», а
+                    також матеріали в блоці «Релізи» публікуються на правах реклами, відповідальність за їхній зміст несе рекламодавець.
+                    </p>
+                    <p>© 2015-2023 Укрінформ. Усі права застережені.</p>
+                    <p>Дизайн сайту — <a href="#">Студія «Laconica»</a></p>
+                    <div class="footer__socials">
+                        <a href="instagram.com" class="icon-instagram">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-3 5a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                    clip-rule="evenodd"></path>
+                                <path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5Zm14 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="facebook.com" class="icon-facebook">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 3.498a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13v-2.7a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5v-2.6Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="twitter.com" class="icon-twitter">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.25 5.133a9.46 9.46 0 0 1-2.65.717 4.57 4.57 0 0 0 2.03-2.512c-.908.53-1.9.903-2.932 1.101A4.647 4.647 0 0 0 16.327 3c-2.55 0-4.615 2.034-4.615 4.542a4.37 4.37 0 0 0 .119 1.036A13.158 13.158 0 0 1 2.315 3.83a4.485 4.485 0 0 0-.627 2.283c0 1.574.821 2.967 2.062 3.782a4.57 4.57 0 0 1-2.1-.567v.056c0 2.204 1.595 4.036 3.704 4.454a4.752 4.752 0 0 1-1.216.159c-.291 0-.582-.028-.868-.085.587 1.805 2.294 3.118 4.315 3.155a9.356 9.356 0 0 1-6.835 1.88A13.063 13.063 0 0 0 7.816 21c8.501 0 13.146-6.923 13.146-12.928 0-.197-.006-.394-.015-.586a9.304 9.304 0 0 0 2.303-2.353Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="youtube.com" class="icon-youtube">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.843 6.975c0-2.11-1.552-3.807-3.469-3.807A170.465 170.465 0 0 0 12.422 3h-.844c-2.7 0-5.353.047-7.95.169-1.912 0-3.464 1.706-3.464 3.815A69.732 69.732 0 0 0 0 11.99a72.582 72.582 0 0 0 .16 5.011c0 2.11 1.551 3.82 3.464 3.82 2.728.127 5.526.183 8.372.178 2.85.01 5.64-.05 8.371-.178 1.918 0 3.47-1.71 3.47-3.82a72.41 72.41 0 0 0 .159-5.016 68.19 68.19 0 0 0-.153-5.01Zm-14.14 9.614V7.378L16.5 11.98l-6.797 4.608Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="telegram.com" class="icon-telegram">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0Zm-9.641-2.617c-.973.405-2.918 1.242-5.833 2.512-.472.188-.721.373-.744.553-.037.303.344.423.863.587l.219.069c.51.166 1.197.36 1.554.367.325.008.686-.125 1.085-.4 2.723-1.838 4.13-2.767 4.217-2.787.063-.015.15-.033.207.02.06.051.053.15.047.176-.038.161-1.534 1.551-2.308 2.271-.241.225-.412.384-.447.42a10.52 10.52 0 0 1-.235.233c-.475.457-.83.8.018 1.36.41.27.737.491 1.063.713.355.243.71.484 1.17.787.116.075.229.156.338.233.413.296.787.56 1.246.518.267-.025.543-.275.683-1.025.332-1.771.983-5.607 1.133-7.189.01-.131.004-.263-.016-.393a.421.421 0 0 0-.143-.272.658.658 0 0 0-.387-.116c-.375.006-.954.207-3.73 1.363Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-pinterest">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.077 9.455c0-.778.136-1.513.404-2.199a5.63 5.63 0 0 1 1.121-1.802 7.614 7.614 0 0 1 1.644-1.329 7.514 7.514 0 0 1 2.002-.844A8.57 8.57 0 0 1 12.433 3c1.14 0 2.2.241 3.182.721a6.02 6.02 0 0 1 2.391 2.094c.614.915.92 1.95.92 3.104 0 .692-.069 1.369-.208 2.031a8.28 8.28 0 0 1-.646 1.913 6.605 6.605 0 0 1-1.082 1.617c-.44.475-.974.854-1.568 1.114a4.961 4.961 0 0 1-2.045.417c-.489 0-.977-.115-1.459-.346-.482-.23-.828-.546-1.036-.951-.073.281-.173.687-.306 1.218-.128.53-.214.872-.252 1.027-.04.154-.114.411-.222.767-.073.263-.167.52-.28.769l-.345.674a7.98 7.98 0 0 1-.498.838c-.18.262-.405.575-.672.935l-.149.053-.099-.108c-.107-1.133-.162-1.811-.162-2.035 0-.663.08-1.407.235-2.233.153-.825.395-1.862.72-3.109.325-1.246.511-1.979.561-2.196-.229-.467-.345-1.077-.345-1.827 0-.599.187-1.16.562-1.688.376-.526.851-.789 1.427-.789.441 0 .783.146 1.028.439.246.292.366.66.366 1.109 0 .476-.158 1.165-.476 2.066-.318.902-.476 1.575-.476 2.022 0 .453.162.832.486 1.129.32.297.743.458 1.18.449.395 0 .762-.09 1.103-.271a2.46 2.46 0 0 0 .85-.733 6.124 6.124 0 0 0 1.016-2.225c.096-.422.17-.823.216-1.2a8.2 8.2 0 0 0 .07-1.077c0-1.247-.396-2.219-1.183-2.915-.79-.696-1.82-1.042-3.088-1.042-1.44 0-2.646.466-3.61 1.401-.967.932-1.453 2.117-1.453 3.554 0 .317.048.623.14.919.088.295.185.53.29.704.104.171.202.338.291.492.09.154.137.264.137.33 0 .202-.053.465-.16.79-.11.325-.242.487-.4.487-.015 0-.077-.011-.185-.034a2.21 2.21 0 0 1-.979-.605 3.17 3.17 0 0 1-.659-1.022 6.985 6.985 0 0 1-.352-1.169 4.884 4.884 0 0 1-.132-1.153Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="footer__second-column">
+                    <li><a href="#">ПОДКАСТИ</a></li>
+                    <li><a href="#">ПУБЛІКАЦІЇ</a></li>
+                    <li><a href="#">ІНТЕРВ'Ю</a></li>
+                    <li><a href="#">ФОТО</a></li>
+                    <li><a href="#">ВІДЕО</a></li>
+                    <li><a href="#">БЛОГИ</a></li>
+                    <li><a href="#">ІНФОГРАФІКА</a></li>
+                    <li><a href="#">ЛОНГРІДИ</a></li>
+                    <li><a href="#">КОНФЕРЕНЦІЇ</a></li>
+                    <li><a href="#">ОФІЦІЙНІ ДОКУМЕНТИ</a></li>
+                    <li><a href="#">РЕЛІЗИ</a></li>
+                </ul>
+                <div class="footer__trird-column">
+                    <p>РУБРИКИ</p>
+                    <ul>
+                        <li><a href="#">Війна</a></li>
+                        <li><a href="#">#UAРазом</a></li>
+                        <li><a href="#">Політика</a></li>
+                        <li><a href="#">Економіка</a></li>
+                        <li><a href="#">Світ</a></li>
+                        <li><a href="#">Суспільство</a></li>
+                        <li><a href="#">Культура</a></li>
+                        <li><a href="#">Регіони</a></li>
+                        <li><a href="#">Київ</a></li>
+                        <li><a href="#">Крим</a></li>
+                        <li><a href="#">Спорт</a></li>
+                        <li><a href="#">Діаспора</a></li>
+                        <li><a href="#">Технології</a></li>
+                    </ul>
+                </div>
+                <div class="footer__fouth-column">
+                    <p>АГЕНТСТВО</p>
+                    <ul>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="#">Контакти</a></li>
+                        <li><a href="#">Передплата</a></li>
+                        <li><a href="#">Послуги</a></li>
+                        <li><a href="#">Правила користування</a></li>
+                        <li><a href="#">FREEDOM</a></li>
+                        <li><a href="#">Тендери</a></li>
+                        <li><a href="#">Запобігання та протидія корупції</a></li>
+                        <li><a href="#">Політика конфіденційності та захисту персональний даних</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
