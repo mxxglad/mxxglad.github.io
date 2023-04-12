@@ -727,14 +727,13 @@ a{
 
     .menu--active{
         display: block;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         background-color: #151515;
         padding-top: 100px;
-        padding-bottom: 10px;
+        padding-bottom: 50px;
         height: 100vh;
-        position: fixed;
         overflow-y: scroll;
     }
 
@@ -760,7 +759,7 @@ a{
     }
 
     .top{
-        padding-bottom: 50px;
+        padding-top: 90px;
     }
 
     .video-main__video {
