@@ -1,0 +1,795 @@
+/*Основные штуки */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 58px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.more-link{
+    text-transform: uppercase;
+    background-color: #151515;
+    width: 223px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 15px 61px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.more-link:hover,
+.more-link:active{
+    background-color: #0066FF;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+a{
+    color: #fff;
+}
+
+
+
+/* Хедер */
+
+.header{
+    padding: 40px 0 45px 0;
+    background-color: #151515;
+}
+
+.header--main{
+    background-color: transparent;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+}
+
+.header__content-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.menu__list{
+    display: flex;
+    gap: 35px;
+    color: #fff;
+}
+
+.list-item a{
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.list__item-link--active{
+    color: #0066ff;
+}
+
+.header__burger{
+    width: 50px;
+    height: 40px;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
+}
+
+.burger__line{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.header__burger::before,
+.header__burger::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 17px;
+    left: 0;
+}
+
+.header__burger::after{
+    top: 30px;
+}
+
+
+
+/*Верхняя часть основной страницы*/
+
+.top{
+    color: #fff;
+    text-align: center;
+    padding-top: 247px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+}
+
+.title{
+    padding-bottom: 40px;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.top__link{
+    background-color: #151515;
+    padding: 23px;
+    max-width: 430px;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.top__link:hover,
+.top__link:active{
+    background-color: #0066FF;
+    transition: background-color 0.3s;
+}
+
+.swiper::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    height: 100vh;
+}
+
+.swiper-pagination-bullet{
+    width: 120px;
+    height: 3px;
+    background-color: #151515;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+    height: 6px;
+    background-color: #fff;
+}
+
+/*Остальные секции основной страницы*/
+
+.why-lease{
+    padding: 150px 0;
+}
+
+.why-lease__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.why-lease__item{
+    text-align: center;
+}
+
+.why-lease__item-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    padding: 30px 0;
+}
+
+.why-lease__item-text{
+    width: 270px;
+    text-align: left;
+    line-height: 130%;
+}
+
+.how-lease{
+    padding-bottom: 150px;
+}
+
+.how-lease__inner{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.how-lease__text{
+    margin-top: 50px;
+}
+
+.how-lease__title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    padding-top: 50px;
+}
+
+.how-lease__list{
+    padding: 50px 0 70px;
+    counter-reset: myCount;
+}
+
+.how-lease__item{
+    list-style: none;
+    width: 270px;
+    position: relative;
+    margin-left: auto;
+    padding: 19px 0 19px 240px;
+    box-sizing: content-box;
+    min-height: 63px;
+    line-height: 130%;
+}
+
+.how-lease__item + .how-lease__item{
+    margin-top: 40px;
+}
+
+.how-lease__item::before{
+    counter-increment: myCount;
+    content: counter(myCount);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #0066FF;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.how-lease__text{
+    line-height: 130%;
+}
+
+.video-main__title{
+    padding-bottom: 20px;
+}
+
+.video-main__text{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.video-main__video{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.important-main__title{
+    margin-bottom: 20px;
+}
+
+.important-main__text{
+    margin: 0 auto;
+    max-width: 580px;
+    line-height: 130%;
+    margin-bottom: 50px;
+}
+
+.important-main__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.important-main__item{
+    width: 270px;
+}
+
+.important-main__img{
+    margin-bottom: 20px;
+}
+
+
+
+
+/*Часть с формой на странице contact.html*/
+
+.contacts{
+    padding: 100px 0 150px 0;
+}
+
+.content__title{
+    padding-bottom: 20px;
+}
+
+.contacts__text{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contacts__form{
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form__input{
+    border: 1px solid #0066ff;
+    width: 270px;
+    padding: 18px 20px;
+    margin-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000;
+}
+
+.form__input::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000;
+    opacity: 0.5;
+}
+
+.form__textarea {
+    border: 1px solid #0066ff;
+    width: 100%;
+    height: 290px;
+    padding: 28px 20px;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.form__textarea::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000;
+    opacity: 0.5;
+}
+
+.form__btn{
+    background-color: #151515;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 15px 61px;
+    margin: 0 auto;
+}
+
+/*Часть с блогом*/
+
+.blog{
+    padding-bottom: 150px;
+}
+
+.blog__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 83px;
+}
+
+.blog__item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog__item-img{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.blog__item-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    flex-basis: 446px;
+}
+
+.blog__item-link{
+    color: #fff;
+    background-color: #0066FF;
+    padding: 4px 20px;
+    transition: background-color 0.3s;
+}
+
+.blog__item-link:hover,
+.blog__item-link:active{
+    background-color: #151515;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+/* Выбор машины на new cars.html */
+
+.choose{
+    padding: 100px 0 150px;
+}
+
+.choose__title{
+    padding-bottom: 50px;
+}
+
+.tabs__btn{
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.tabs__btn-item{
+    color: #000;  
+    background: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+}
+
+.tabs__btn-item--active{
+    color: #0066FF;
+}
+
+.tabs__content-item{
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 40px;
+}
+
+.tabs__content-item.tabs__content-item--active{
+    display: grid; 
+}
+
+.card{
+    text-align: center;
+}
+
+.card__title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    padding-bottom: 20px;
+}
+
+.card__text{
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+
+.card__price{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 29px;
+    margin-bottom: 20px;
+}
+
+.card__link{
+    line-height: 130%;
+    color: #0066FF;
+    border: 1px solid #0066FF;
+    border-top: none;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.card__link:hover,
+.card__link:active{
+    background-color: #0066FF;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.card__border{
+    border: 1px solid #0066FF;
+    border-top: none;
+}
+
+.tabs{
+    margin-bottom: 70px;
+}
+
+
+
+
+
+/* Футер */
+
+.footer{
+    background-color: #151515;
+    padding: 50px 0 32px 0;
+    color: #fff;
+}
+
+.footer__menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__menu-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 29px;
+}
+
+.footer__menu-item{
+    margin-bottom: 20px;
+}
+
+.footer__menu-link{
+    color: #fff;
+}
+
+.apps{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.footer__copy{
+    text-align: center;
+    font-size: 0.75rem;
+    max-width: 800px;
+    margin: 50px auto 30px;
+    line-height: 15px;
+}
+
+.copy__nav{
+    max-width: 586px;
+    margin: 0 auto;
+}
+
+.copy__nav-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.copy__nav-link{
+    color: #fff;
+}
+
+
+
+
+
+
+
+@media (max-width: 1180px) {
+    .container{
+        padding: 10px;
+    }
+    
+    .header__content-container{
+        padding: 0 10px;
+    }
+
+    .title{
+        font-size: 4.5rem;
+    }
+    
+    .top__link{
+        max-width: 350px;
+    }
+
+    .important-main__list{
+        padding: 20px;
+    }
+
+    .why-lease {
+        padding: 50px 0;
+    }
+
+    .why-lease__list{
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .why-lease__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how-lease__list {
+        padding: 50px 0 10px;
+    }
+
+    .how-lease {
+        padding-bottom: 50px;
+    }
+
+    .video-main__video {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1020px){
+    .video-main__video{
+        width: 100%;
+    }
+}
+
+@media (max-width: 820px){
+    .header__burger{
+        display: block;
+        right: 10px;
+    }
+
+    .header__burger--active:before{
+        transform: rotate(45deg);
+        top: 10px;
+        right: 10px;
+    }
+
+    .header__burger--active:after {
+        transform: rotate(-45deg);
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu--active{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -40px;
+        background-color: #151515;
+        padding-top: 100px;
+    }
+
+    .menu__list--active{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .list-item{
+        padding: 10px;
+        height: 30px;
+        width: 200px;
+        border-bottom: 1px solid #fff;
+        border-spacing: 10px;
+    }
+
+    .burger__line--active{
+        display: none;
+    }
+
+    .body--locked {
+        overflow: hidden;
+    }
+
+    .video-main__video {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px){
+    .footer__menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 620px){
+    .why-lease__list {
+        padding: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .how-lease__item {
+        padding: 19px 0 19px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .how-lease__item::before {
+        position: static;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .how-lease__item+.how-lease__item {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 380px){
+    .apps{
+        flex-direction: column;
+        align-items: center;
+    }
+}
