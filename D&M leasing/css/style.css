@@ -652,8 +652,8 @@ a{
         padding: 0 10px;
     }
 
-    .menu{
-        overflow-y: scroll;
+    .top {
+        padding-top: 90px;
     }
 
     .title{
@@ -756,10 +756,6 @@ a{
 
     .body--locked {
         overflow: hidden;
-    }
-
-    .top{
-        padding-top: 90px;
     }
 
     .video-main__video {
