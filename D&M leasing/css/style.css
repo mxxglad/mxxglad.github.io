@@ -141,7 +141,7 @@ a{
 .top{
     color: #fff;
     text-align: center;
-    padding-top: 247px;
+    padding-top: 200px;
     position: absolute;
     z-index: 2;
     left: 0;
@@ -643,6 +643,8 @@ a{
 
 
 
+
+
 @media (max-width: 1180px) {
     .container{
         padding: 10px;
@@ -650,10 +652,6 @@ a{
     
     .header__content-container{
         padding: 0 10px;
-    }
-
-    .top {
-        padding-top: 90px;
     }
 
     .title{
