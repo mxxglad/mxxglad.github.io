@@ -657,11 +657,12 @@ a{
     }
 
     .title{
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     
     .top__link{
-        max-width: 350px;
+        max-width: 300px;
+        font-size: 1.5rem;
     }
 
     .important-main__list{
@@ -728,16 +729,18 @@ a{
         display: block;
         position: absolute;
         right: 0;
-        top: -40px;
+        top: 0;
         background-color: #151515;
         padding-top: 100px;
+        padding-bottom: 10px;
+        height: 100vh;
+        position: fixed;
+        overflow-y: scroll;
     }
 
     .menu__list--active{
         display: flex;
         flex-direction: column;
-        height: 100vh;
-        overflow-y: scroll;
     }
 
     .list-item{
