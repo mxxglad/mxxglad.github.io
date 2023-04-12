@@ -652,6 +652,10 @@ a{
         padding: 0 10px;
     }
 
+    .menu{
+        overflow-y: scroll;
+    }
+
     .title{
         font-size: 4.5rem;
     }
