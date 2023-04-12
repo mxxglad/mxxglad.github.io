@@ -152,6 +152,10 @@ a{
     padding-bottom: 40px;
     font-size: 6rem;
     font-weight: 700;
+    position: absolute;
+    top: 300px;
+    right: 0;
+    left: 0;
 }
 
 .top__link{
@@ -159,11 +163,14 @@ a{
     padding: 23px;
     max-width: 430px;
     width: 100%;
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     font-size: 2.25rem;
     font-weight: 700;
     transition: background-color 0.3s;
+    position: absolute;
+    top: 420px;
+    left: calc(50% - 215px);
 }
 
 .top__link:hover,
