@@ -155,7 +155,7 @@ a{
 }
 
 .top__link{
-    background-color: #151515;
+    background-color: red;
     padding: 23px;
     max-width: 430px;
     width: 100%;
@@ -643,6 +643,13 @@ a{
 
 
 
+
+
+@media (max-height: 500px){
+    .top{
+        padding-top: 100px;
+    }
+}
 
 
 @media (max-width: 1180px) {
