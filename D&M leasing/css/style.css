@@ -89,10 +89,14 @@ a{
     color: #fff;
 }
 
-.list-item a{
+.list-item .list__item-link{
     text-transform: uppercase;
     font-weight: 700;
     line-height: 19px;
+}
+
+.list-item .list__item-link:hover{
+    color: #0066FF;
 }
 
 .list__item-link--active{
@@ -494,7 +498,8 @@ a{
     line-height: 29px;
 }
 
-.tabs__btn-item--active{
+.tabs__btn-item--active,
+.tabs__btn-item:hover{
     color: #0066FF;
 }
 
@@ -587,6 +592,10 @@ a{
 
 .footer__menu-link{
     color: #fff;
+}
+
+.footer__menu-link:hover{
+    color: #0066FF;
 }
 
 .apps{
