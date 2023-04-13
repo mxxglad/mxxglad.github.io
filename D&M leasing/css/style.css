@@ -826,6 +826,13 @@ a{
     .how-lease__item+.how-lease__item {
         margin-top: 15px;
     }
+
+
+
+    .blog__items{
+        grid-template-columns: 1fr;
+    }
+        
 }
 
 
