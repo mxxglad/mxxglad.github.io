@@ -789,6 +789,15 @@ a{
     .swiper-pagination-bullet--active{
         height: 4px;
     }
+
+
+
+
+
+
+    .tabs__content-item {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 620px){
@@ -817,8 +826,16 @@ a{
     .how-lease__item+.how-lease__item {
         margin-top: 15px;
     }
-
 }
+
+
+@media (max-width: 510px) {
+    .tabs__content-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 @media (max-width: 380px){
     .apps{
