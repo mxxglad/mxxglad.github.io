@@ -70,8 +70,8 @@ body{
 }
 
 .header__burger{
-    width: 60px;
-    height: 35px;
+    width: 40px;
+    height: 25px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -351,6 +351,9 @@ body{
         align-items: center;
     }
     
+    .footer{
+        background-color: #000;
+    }
 }
 
 
@@ -375,6 +378,10 @@ body{
 
 
 @media (max-width: 768px){
+    .header{
+        height: 80px;
+    }
+
     .header__nav{
         display: none;
     }
@@ -420,6 +427,21 @@ body{
 
     .body--locked {
         overflow: hidden;
+    }
+
+    .new {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .colors {
+        padding-bottom: 100px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        background-color: #574B63;
+        padding: 65px 0;
     }
 }
 
