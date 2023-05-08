@@ -1,17 +1,12 @@
 exchangeRate(); // тут я вызываю асинхронную функцию, которая читает API и делает всякое другое после
 
-const selectOtherFirst = document.querySelector('.other__currency-1'); //просто записываю нужные элементы страницы в переменные
-const selectOtherSecond = document.querySelector('.other__currency-2');
-const selectUah = document.querySelector('.uah__currency-other');
-const select = document.querySelector('.uah__currency');
+const selectFirst = document.querySelector('.currency-1'); //просто записываю нужные элементы страницы в переменные
+const selectSecond = document.querySelector('.currency-2');
 
-const buttonSwapUah = document.querySelector('.uah__swap');
-const buttonSwapOther = document.querySelector('.other__swap');
+const buttonSwap = document.querySelector('.swap');
 
-const inputOther = document.querySelector('.other__input');
-const displayOther = document.querySelector('.other__display');
-const inputUah = document.querySelector('.uah__input')
-const displayUah = document.querySelector('.uah__display')
+const input = document.querySelector('.input-value');
+const display = document.querySelector('.display-value');
 
 async function exchangeRate() {
     const response = await fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'); // три строчки обработки апи
@@ -30,9 +25,13 @@ async function exchangeRate() {
     }
 
     let arrayCurrencyRate = [];
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < arrayCurrencyName.length; i++) {
         arrayCurrencyRate.push(data[i].rate);
     }
+    
+    arrayCurrencyName.push('Гривня');
+    arrayCurrencyCode.push('UAH');
+    arrayCurrencyRate.push('1');
 
 
     for (let i = 0; i < data.length; i++) {
@@ -52,7 +51,7 @@ async function exchangeRate() {
         var option = document.createElement('option');
         option.className = 'option';
         option.innerText = arrayCurrencyName[i];
-        selectOtherFirst.appendChild(option);
+        selectFirst.appendChild(option);
 
     }
 
@@ -60,21 +59,14 @@ async function exchangeRate() {
         var option = document.createElement('option');
         option.className = 'option';
         option.innerText = arrayCurrencyName[i];
-        selectOtherSecond.appendChild(option);
-    }
-
-    for (let i = 0; i < arrayCurrencyName.length; i++) {
-        var option = document.createElement('option');
-        option.className = 'option';
-        option.innerText = arrayCurrencyName[i];
-        selectUah.appendChild(option);
+        selectSecond.appendChild(option);
     }
 
 
     //тут заполняю таблицу
     const table = document.querySelector('.exchange-table');
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < arrayCurrencyName.length; i++) {
         var tr = document.createElement('tr');
         tr.className = 'tr';
         table.appendChild(tr);
@@ -97,68 +89,50 @@ async function exchangeRate() {
     setInterval(function () {
         //пишу курс к гривне в параграфах
 
-        const rateOther1 = document.querySelector('.other__display-currency-1');
-        const rateOther2 = document.querySelector('.other__display-currency-2');
-        const rateUah = document.querySelector('.uah__rate');
-        const rateUahOther = document.querySelector('.uah__rate-other');
+        const rate1 = document.querySelector('.display-rate-1');
+        const rate2 = document.querySelector('.display-rate-2');
 
-        var currentCurrency1 = selectOtherFirst.value;
-        var currentCurrency2 = selectOtherSecond.value;
-        var currentCurrencyUah = selectUah.value;
+        var currentCurrency1 = selectFirst.value;
+        var currentCurrency2 = selectSecond.value;
 
         let currentIndex1 = 0;
         let currentIndex2 = 0;
-        let currentIndexUah = 0;
 
-        for (currentIndex1; currentIndex1 < data.length; currentIndex1++) {
-            if (data[currentIndex1].txt === currentCurrency1) {
+        for (currentIndex1; currentIndex1 < arrayCurrencyRate.length; currentIndex1++) {
+            if (arrayCurrencyName[currentIndex1] === currentCurrency1) {
                 break;
             }
         }
-        rateOther1.innerText = 'Курс до гривні: ' + data[currentIndex1].rate;
+        rate1.innerText = 'Курс до гривні: ' + arrayCurrencyRate[currentIndex1];
 
-        for (currentIndex2; currentIndex2 < data.length; currentIndex2++) {
-            if (data[currentIndex2].txt === currentCurrency2) {
+        for (currentIndex2; currentIndex2 < arrayCurrencyRate.length; currentIndex2++) {
+            if (arrayCurrencyName[currentIndex2] === currentCurrency2) {
                 break;
             }
         }
-        rateOther2.innerText = 'Курс до гривні: ' + data[currentIndex2].rate;
+        rate2.innerText = 'Курс до гривні: ' + arrayCurrencyRate[currentIndex2];
 
 
-        for (currentIndexUah; currentIndexUah < data.length; currentIndexUah++) {
-            if (data[currentIndexUah].txt === currentCurrencyUah) {
-                break;
-            }
-        }
-
-        if (selectUah.value == 'uah') {
-            rateUahOther.innerText = '';
-        }
-        else {
-            rateUahOther.innerText = 'Курс до гривні: ' + data[currentIndexUah].rate;
-        }
 
 
         // рассчёт курса в инпутах
-        if (inputOther.value == '') displayOther.value = '';
-        else displayOther.value = (inputOther.value * data[currentIndex1].rate / data[currentIndex2].rate).toFixed(2);
+        if (input.value == '') display.value = '';
+        else display.value = (input.value * arrayCurrencyRate[currentIndex1] / arrayCurrencyRate[currentIndex2]).toFixed(2);
 
-        if (inputUah.value == '') displayUah.value = '';
-        else displayUah.value = (inputUah.value / data[currentIndexUah].rate).toFixed(2);
     }, 1);
 }
 
 
 //ну и кнопка смены валют туда-сюда
 
-buttonSwapOther.onclick = function () {
-    let select_swapValue = selectOtherFirst.value;
-    selectOtherFirst.value = selectOtherSecond.value;
-    selectOtherSecond.value = select_swapValue;
+buttonSwap.onclick = function () {
+    let select_swapValue = selectFirst.value;
+    selectFirst.value = selectSecond.value;
+    selectSecond.value = select_swapValue;
 
-    let input_swapValue = inputOther.value;
-    inputOther.value = displayOther.value;
-    displayOther.value = input_swapValue;
+    let input_swapValue = input.value;
+    input.value = display.value;
+    display.value = input_swapValue;
 };
 
 
