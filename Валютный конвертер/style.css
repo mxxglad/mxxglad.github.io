@@ -105,7 +105,7 @@ td:last-child {
     padding-bottom: 50px;
 }
 
-@media (max-width: 999px) {
+@media only screen and (max-width: 999px) {
     .wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -118,12 +118,11 @@ td:last-child {
         padding: 25px;
     }
 
-    select,
-    input {
-        max-width: 80%;
+    .wrapper__column{
+        width: 80%;
         margin: 0 auto;
     }
-
+    
     button {
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -132,7 +131,7 @@ td:last-child {
     }
 
     p {
-        margin-left: 5%;
+        margin-left: 0;
     }
 
     table {
@@ -140,5 +139,3 @@ td:last-child {
 
     }
 }
-
-
