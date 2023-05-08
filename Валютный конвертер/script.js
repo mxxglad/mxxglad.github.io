@@ -51,14 +51,23 @@ async function exchangeRate() {
         var option = document.createElement('option');
         option.className = 'option';
         option.innerText = arrayCurrencyName[i];
+        option.value = arrayCurrencyCode[i];
         selectFirst.appendChild(option);
-
+    }
+    
+    // ставлю гривну первой в первом селекте
+    let options = selectFirst.options;
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value === "UAH") {
+            options[i].setAttribute("selected", "selected");
+        }
     }
 
     for (let i = 0; i < arrayCurrencyName.length; i++) {
         var option = document.createElement('option');
         option.className = 'option';
         option.innerText = arrayCurrencyName[i];
+        option.value = arrayCurrencyCode[i];
         selectSecond.appendChild(option);
     }
 
@@ -99,14 +108,14 @@ async function exchangeRate() {
         let currentIndex2 = 0;
 
         for (currentIndex1; currentIndex1 < arrayCurrencyRate.length; currentIndex1++) {
-            if (arrayCurrencyName[currentIndex1] === currentCurrency1) {
+            if (arrayCurrencyCode[currentIndex1] === currentCurrency1) {
                 break;
             }
         }
         rate1.innerText = 'Курс до гривні: ' + arrayCurrencyRate[currentIndex1];
 
         for (currentIndex2; currentIndex2 < arrayCurrencyRate.length; currentIndex2++) {
-            if (arrayCurrencyName[currentIndex2] === currentCurrency2) {
+            if (arrayCurrencyCode[currentIndex2] === currentCurrency2) {
                 break;
             }
         }
