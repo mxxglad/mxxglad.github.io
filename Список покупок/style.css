@@ -91,9 +91,4 @@ li::before{
         margin-left: 0;
         text-align: center;
     }
-
-    ul{
-        margin: 0 auto;
-
-    }
 }
