@@ -12,9 +12,9 @@ add.onclick = function () {
 
     let liArray = document.querySelectorAll('li');
 
-
+    input.value = '';
     document.querySelector('p').textContent = '';
-    reset.style.display = 'block'
+    reset.style.display = 'block';
 
     // for (let i = 0; i < lis.length; i++) {
     //     lis[i].onclick = function () {
