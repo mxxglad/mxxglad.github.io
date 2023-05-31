@@ -9,7 +9,7 @@ body{
 .list{
     min-height: 100vh;
     min-width: 50%;
-    width: 300px;
+    width: 500px;
     background-color: #fff;
     margin: 0 auto;
     padding-top: 50px;
@@ -25,10 +25,10 @@ h1{
 
 input{
     display: block;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #000;
     margin: 0 auto;
     margin-top: 30px;
-    width: 290px;
+    width: 300px;
     font-size: 24px;
 }
 
@@ -56,6 +56,7 @@ p{
 }
 
 ul{
+    display: block;
     margin-top: 30px;
     margin-left: 75px;
     font-size: 24px;
@@ -73,4 +74,26 @@ li::before{
 
 #reset{
     display: none;
+}
+
+
+@media (max-width: 768px) {
+    .list{
+        width: 100%;
+    }
+
+    h3{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    p{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    ul{
+        margin: 0 auto;
+
+    }
 }
