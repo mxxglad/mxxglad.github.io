@@ -1,44 +1,66 @@
 const input = document.querySelector('input');
-const list = document.querySelector('ul');
-const add = document.querySelector('#add');
-const reset = document.querySelector('#reset');
+const fillList = document.querySelector('#fill');
+const addButton = document.querySelector('#add');
+const resetButton = document.querySelector('#reset');
+const rememberButton = document.querySelector('#remember')
 
-add.onclick = function () {
+addButton.onclick = function () {
     if (input.value !== '') {
         let li = document.createElement('li');
         li.textContent = input.value;
-        list.appendChild(li);
-    }
+        fillList.appendChild(li);
 
-    let liArray = document.querySelectorAll('li');
 
-    input.value = '';
-    document.querySelector('p').textContent = '';
-    reset.style.display = 'block';
+        let liArray = document.querySelectorAll('li');
 
-    // for (let i = 0; i < lis.length; i++) {
-    //     lis[i].onclick = function () {
-    //         lis[i].style.textDecoration = 'line-through';
-    //     }
-    // }
+        input.value = '';
+        document.querySelector('p').textContent = '';
+        resetButton.style.display = 'block';
+        rememberButton.style.display = 'block';    
 
-    liArray.forEach(function (li) {
-        li.onclick = function () {
-            this.style.textDecoration = 'line-through';
+        resetButton.onclick = function () {
+            liArray.forEach(function (li) {
+                li.remove();
+            })
+            resetButton.style.display = 'none';
+            rememberButton.style.display = 'none';
+            document.querySelector('p').textContent = 'Список пуст';
+        };
+
+
+        rememberButton.onclick = function () {
+            let groceries = [];
+            for (let i = 0; i < liArray.length; i++){
+                groceries.push(liArray[i].textContent)
+            }
+            console.log(groceries)
+            window.localStorage.setItem('name', JSON.stringify(groceries));
+
         }
-    })
-
-    reset.onclick = function () {
-        liArray.forEach(function (li) {
-            li.remove();
-        })
-        reset.style.display = 'none';
-        document.querySelector('p').textContent = 'Список пуст';
-    };
+    }
 }
 
 
+const saveButton = document.querySelector('#saved')
+const lastList = document.querySelector('#last')
 
+saveButton.onclick = function () {
+    let groceriesGot = JSON.parse(localStorage.getItem('name'));
+    console.log(groceriesGot);
+    for (let i = 0; i < groceriesGot.length; i++){
+        let li = document.createElement('li');
+        li.textContent = groceriesGot[i];
+        lastList.appendChild(li);
+    }
+
+    let liArray = document.querySelectorAll('#last li')
+
+    liArray.forEach(function (li) {
+            li.onclick = function () {
+                this.style.textDecoration = 'line-through';
+            }
+        })
+}
 
 
 
