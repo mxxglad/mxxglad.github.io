@@ -66,7 +66,7 @@ savedButton.onclick = function () {
                             groceriesGot.splice(groceriesGot.indexOf(this.textContent), 1)
                             this.remove();
                             window.localStorage.setItem('name', JSON.stringify(groceriesGot));
-                        }, 1000);
+                        }, 10000);
                     }
                 }
                 else {
