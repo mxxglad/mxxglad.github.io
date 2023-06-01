@@ -16,7 +16,7 @@ addButton.onclick = function () {
         input.value = '';
         document.querySelector('p').textContent = '';
         clearButton.style.display = 'block';
-        rememberButton.style.display = 'block';    
+        rememberButton.style.display = 'block';
 
         clearButton.onclick = function () {
             liArray.forEach(function (li) {
@@ -29,16 +29,15 @@ addButton.onclick = function () {
 
 
         rememberButton.onclick = function () {
-            let groceries = [];
-            for (let i = 0; i < liArray.length; i++){
+            let groceries = JSON.parse(localStorage.getItem('name')) || [];
+            for (let i = 0; i < liArray.length; i++) {
                 groceries.push(liArray[i].textContent);
                 window.localStorage.setItem('name', JSON.stringify(groceries));
             }
+            
         }
     }
 }
-
-
 const savedButton = document.querySelector('#saved')
 const lastList = document.querySelector('#last')
 const resetButton = document.querySelector('#reset')
@@ -46,31 +45,34 @@ const resetButton = document.querySelector('#reset')
 savedButton.onclick = function () {
     let groceriesGot = JSON.parse(localStorage.getItem('name'));
     if (groceriesGot !== null) {
-        for (let i = 0; i < groceriesGot.length; i++){
-        let li = document.createElement('li');
-        li.textContent = groceriesGot[i];
-        lastList.appendChild(li);
-    }
+        for (let i = 0; i < groceriesGot.length; i++) {
+            let li = document.createElement('li');
+            li.textContent = groceriesGot[i];
+            lastList.appendChild(li);
+        }
 
-    let liArray = document.querySelectorAll('#last li')
+        let liArray = document.querySelectorAll('#last li')
 
-    liArray.forEach(function (li) {
+        liArray.forEach(function (li) {
             li.onclick = function () {
                 this.style.textDecoration = 'line-through';
             }
         })
     }
-    else document.querySelector('#h3').textContent = 'Последний список: Пусто'
+        
+    else document.querySelector('#h3').textContent = 'Последний список пустой';
+    
 }
 
 resetButton.onclick = function () {
-    for (let i = 0; i < document.querySelectorAll('#last li').length; i++){
+    for (let i = 0; i < document.querySelectorAll('#last li').length; i++) {
         document.querySelectorAll('#last li')[i].remove();
     }
     window.localStorage.clear();
     console.log(window.localStorage);
-    
+
 }
+
 
 
 
