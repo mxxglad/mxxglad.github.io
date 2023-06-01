@@ -4,6 +4,8 @@ const addButton = document.querySelector('#add');
 const clearButton = document.querySelector('#clear');
 const rememberButton = document.querySelector('#remember')
 
+let groceries;
+
 addButton.onclick = function () {
     if (input.value !== '') {
         let li = document.createElement('li');
@@ -29,12 +31,11 @@ addButton.onclick = function () {
 
 
         rememberButton.onclick = function () {
-            let groceries = JSON.parse(localStorage.getItem('name')) || [];
+            groceries = JSON.parse(localStorage.getItem('name')) || [];
             for (let i = 0; i < liArray.length; i++) {
                 groceries.push(liArray[i].textContent);
                 window.localStorage.setItem('name', JSON.stringify(groceries));
             }
-            
         }
     }
 }
@@ -54,23 +55,41 @@ savedButton.onclick = function () {
         let liArray = document.querySelectorAll('#last li')
 
         liArray.forEach(function (li) {
+            let timerId;
             li.onclick = function () {
-                this.style.textDecoration = 'line-through';
+                console.log(groceriesGot)
+                if (!this.classList.contains('crossed-out')) {
+                    this.classList.add('crossed-out');
+                    if (this.classList.contains('crossed-out')) {
+                        clearTimeout(timerId);
+                        timerId = setTimeout(() => {
+                            groceriesGot.splice(groceriesGot.indexOf(this.textContent), 1)
+                            this.remove();
+                            window.localStorage.setItem('name', JSON.stringify(groceriesGot));
+                        }, 1000);
+                    }
+                }
+                else {
+                    this.classList.remove('crossed-out')
+                    clearTimeout(timerId);
+                }
+
             }
         })
+        document.querySelector('#h3').textContent = 'Последний список:';
     }
-        
+
     else document.querySelector('#h3').textContent = 'Последний список пустой';
-    
+
 }
 
 resetButton.onclick = function () {
-    for (let i = 0; i < document.querySelectorAll('#last li').length; i++) {
-        document.querySelectorAll('#last li')[i].remove();
+    console.log(document.querySelectorAll('#last li').length)
+    let liArray = document.querySelectorAll('#last li');
+    for (let i = 0; i < liArray.length; i++) {
+        liArray[i].remove();
     }
-    window.localStorage.clear();
-    console.log(window.localStorage);
-
+    localStorage.clear();
 }
 
 
