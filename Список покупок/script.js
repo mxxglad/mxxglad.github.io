@@ -45,11 +45,17 @@ const savedButton = document.querySelector('#saved')
 const lastList = document.querySelector('#last')
 const resetButton = document.querySelector('#reset')
 
-let savedClicked = 0;
 
 savedButton.onclick = function () {
-    if (savedClicked < 1) {
-        let groceriesGot = JSON.parse(localStorage.getItem('name'));
+    let liArray = document.querySelectorAll('#last li')
+    if (liArray.length !== 0) {
+        liArray.forEach(function (li) {
+            li.remove();
+        })
+    }
+        
+
+let groceriesGot = JSON.parse(localStorage.getItem('name'));
         if (groceriesGot !== null) {
             for (let i = 0; i < groceriesGot.length; i++) {
                 let li = document.createElement('li');
@@ -57,7 +63,7 @@ savedButton.onclick = function () {
                 lastList.appendChild(li);
             }
 
-            let liArray = document.querySelectorAll('#last li')
+            liArray = document.querySelectorAll('#last li')
 
             liArray.forEach(function (li) {
                 let timerId;
@@ -85,8 +91,8 @@ savedButton.onclick = function () {
         }
 
         else document.querySelector('#h3').innerHTML = 'Последний список пустой';
-    }
-    savedClicked++;
+
+
 }
 
 resetButton.onclick = function () {
