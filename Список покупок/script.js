@@ -79,7 +79,7 @@ savedButton.onclick = function () {
         document.querySelector('#h3').textContent = 'Последний список:';
     }
 
-    else document.querySelector('#h3').textContent = 'Последний список пустой';
+    else document.querySelector('#h3').innerHTML = 'Последний список пустой';
 
 }
 
