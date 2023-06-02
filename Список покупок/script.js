@@ -21,12 +21,14 @@ addButton.onclick = function () {
         rememberButton.style.display = 'block';
 
         clearButton.onclick = function () {
-            liArray.forEach(function (li) {
-                li.remove();
-            })
-            clearButton.style.display = 'none';
-            rememberButton.style.display = 'none';
-            document.querySelector('p').textContent = 'Список пуст';
+            liArray[liArray.length - 1].remove();
+            liArray = document.querySelectorAll('#fill li');
+            if (liArray.length === 0) {
+                clearButton.style.display = 'none';
+                rememberButton.style.display = 'none';
+                document.querySelector('p').textContent = 'Список пуст';
+            }
+
         };
 
 
@@ -43,44 +45,48 @@ const savedButton = document.querySelector('#saved')
 const lastList = document.querySelector('#last')
 const resetButton = document.querySelector('#reset')
 
+let savedClicked = 0;
+
 savedButton.onclick = function () {
-    let groceriesGot = JSON.parse(localStorage.getItem('name'));
-    if (groceriesGot !== null) {
-        for (let i = 0; i < groceriesGot.length; i++) {
-            let li = document.createElement('li');
-            li.textContent = groceriesGot[i];
-            lastList.appendChild(li);
+    if (savedClicked < 1) {
+        let groceriesGot = JSON.parse(localStorage.getItem('name'));
+        if (groceriesGot !== null) {
+            for (let i = 0; i < groceriesGot.length; i++) {
+                let li = document.createElement('li');
+                li.textContent = groceriesGot[i];
+                lastList.appendChild(li);
+            }
+
+            let liArray = document.querySelectorAll('#last li')
+
+            liArray.forEach(function (li) {
+                let timerId;
+                li.onclick = function () {
+                    console.log(groceriesGot)
+                    if (!this.classList.contains('crossed-out')) {
+                        this.classList.add('crossed-out');
+                        if (this.classList.contains('crossed-out')) {
+                            clearTimeout(timerId);
+                            timerId = setTimeout(() => {
+                                groceriesGot.splice(groceriesGot.indexOf(this.textContent), 1)
+                                this.remove();
+                                window.localStorage.setItem('name', JSON.stringify(groceriesGot));
+                            }, 5000);
+                        }
+                    }
+                    else {
+                        this.classList.remove('crossed-out')
+                        clearTimeout(timerId);
+                    }
+
+                }
+            })
+            document.querySelector('#h3').textContent = 'Последний список:';
         }
 
-        let liArray = document.querySelectorAll('#last li')
-
-        liArray.forEach(function (li) {
-            let timerId;
-            li.onclick = function () {
-                console.log(groceriesGot)
-                if (!this.classList.contains('crossed-out')) {
-                    this.classList.add('crossed-out');
-                    if (this.classList.contains('crossed-out')) {
-                        clearTimeout(timerId);
-                        timerId = setTimeout(() => {
-                            groceriesGot.splice(groceriesGot.indexOf(this.textContent), 1)
-                            this.remove();
-                            window.localStorage.setItem('name', JSON.stringify(groceriesGot));
-                        }, 10000);
-                    }
-                }
-                else {
-                    this.classList.remove('crossed-out')
-                    clearTimeout(timerId);
-                }
-
-            }
-        })
-        document.querySelector('#h3').textContent = 'Последний список:';
+        else document.querySelector('#h3').innerHTML = 'Последний список пустой';
     }
-
-    else document.querySelector('#h3').innerHTML = 'Последний список пустой';
-
+    savedClicked++;
 }
 
 resetButton.onclick = function () {
