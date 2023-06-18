@@ -1,4 +1,5 @@
 console.log(localStorage)
+console.log('asd')
 const input = document.querySelector('input');
 const fillList = document.querySelector('#fill');
 const addButton = document.querySelector('#add');
