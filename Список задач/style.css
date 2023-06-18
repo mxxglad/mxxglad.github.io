@@ -15,7 +15,6 @@ header{
 h1{
     font-size: 32px;
     font-weight: 700;
-    color: red;
 }
 
 .add{
@@ -99,7 +98,8 @@ input{
 
 @media (max-width: 1200px) {
     .container{
-        width: 420px;
+        width: 100%;
+        padding: 15px;
     }
 
 }
