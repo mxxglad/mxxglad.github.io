@@ -1,23 +1,23 @@
-*{
+* {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-header{
+header {
     border-bottom: 1px solid black;
     padding: 10px;
 }
 
-.container{
+.container {
     width: 1200px;
     margin: 0 auto;
 }
 
-h1{
+h1 {
     font-size: 32px;
     font-weight: 700;
 }
 
-.add{
+.add {
     font-size: 16px;
     background-color: #fff;
     border: 1px solid black;
@@ -25,25 +25,25 @@ h1{
     padding: 5px;
 }
 
-.cards{
+.cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 60px;
     row-gap: 30px;
 }
 
-.card{
+.card {
     width: 320px;
     height: 300px;
     border: 2px solid black;
     border-radius: 10px;
 }
 
-.cards{
+.cards {
     margin-top: 20px;
 }
 
-.title{
+.title {
     height: 50px;
     border-bottom: 1px solid #000;
     display: flex;
@@ -52,29 +52,29 @@ h1{
     padding: 10px;
 }
 
-h3{
+h3 {
     font-size: 20px;
 }
 
-.delete{
+.delete {
     background-color: #fff;
 }
 
-.delete i{
+.delete i {
     font-size: 20px;
     color: red;
 }
 
-.desc{
+.desc {
     padding: 10px;
 }
 
-.desc p{
+.desc p {
     font-size: 16px;
     text-align: justify;
 }
 
-form{
+form {
     margin: 0 auto;
     margin-top: 20px;
     width: 320px;
@@ -86,23 +86,24 @@ form{
     box-sizing: border-box;
 }
 
-input{
+input {
     border-bottom: 1px solid #000;
     font-size: 16px;
 }
 
-.form__button{
+.form__button {
     background-color: #fff;
     padding: 10px;
     font-size: 16px;
 }
 
 @media (max-width: 1200px) {
-    .container{
+    .container {
         width: 100%;
         padding: 15px;
     }
-    .cards{
+
+    .cards {
         display: flex;
         flex-direction: column;
         align-items: center;
