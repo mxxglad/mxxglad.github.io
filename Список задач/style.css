@@ -102,4 +102,10 @@ input{
         width: 100%;
         padding: 15px;
     }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 0;
+    }
 }
